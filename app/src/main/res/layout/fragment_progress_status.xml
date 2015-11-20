@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="duhblea.me.hourtrax.ProgressStatus">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/hoursProgress"
+            android:maxHeight="50dp"
+            android:minHeight="50dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="#FF5722"
+            android:outlineProvider="paddedBounds"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView14"
+            android:layout_marginTop="184dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0 Hours"
+            android:id="@+id/textView14"
+            android:layout_below="@+id/hoursProgress"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="80 Hours"
+            android:id="@+id/textView16"
+            android:layout_below="@+id/hoursProgress"
+            android:layout_alignRight="@+id/hoursProgress"
+            android:layout_alignEnd="@+id/hoursProgress" />
+
+    </RelativeLayout>
+</FrameLayout>

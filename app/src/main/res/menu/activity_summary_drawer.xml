@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Navigation">
+        <menu>
+            <item android:id="@+id/summary_menu_item" android:icon="@drawable/starnav"
+                android:title="Summary" />
+            <item android:id="@+id/week1_menu_item" android:icon="@drawable/navweek1"
+                android:title="Week 1" />
+            <item android:id="@+id/week2_menu_item" android:icon="@drawable/navweek2"
+                android:title="Week 2" />
+        </menu>
+    </item>
+
+</menu>
