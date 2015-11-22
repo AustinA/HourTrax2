@@ -149,6 +149,7 @@ public class Biweek {
                         break;
                     case SUNDAY:
                         sun2 = hoursWorked;
+                        break;
                     default:
                         throw new IllegalArgumentException("There was an error setting the hours");
                 }

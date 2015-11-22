@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="duhblea.me.hourtrax.Week2">
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center">
 
@@ -15,7 +15,7 @@
             android:layout_alignParentTop="true"
             android:selectAllOnFocus="true"
             android:layout_toEndOf="@+id/textView3"
-            android:layout_marginStart="60dp" />
+            android:layout_marginLeft="60dp" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -83,7 +83,6 @@
             android:textSize="20dp"
             android:text="Monday"
             android:id="@+id/textView"
-            android:layout_marginStart="40dp"
             android:layout_above="@+id/tueField"
             android:layout_alignParentStart="true"
             android:textColor="#747474" />
@@ -156,6 +155,14 @@
             android:id="@+id/clearBtn"
             android:layout_below="@+id/sunField"
             android:layout_alignEnd="@+id/sunField" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/weekTotal"
+            android:layout_below="@+id/clearBtn"
+            android:layout_alignStart="@+id/textView7" />
 
     </RelativeLayout>
 

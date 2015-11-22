@@ -121,6 +121,8 @@ public class Week1 extends Fragment implements View.OnKeyListener {
 
         weekTotal.setText("Hours worked:  " + Float.toString(biweek.calculateWeek1()));
 
+        mActivity.updateNavHeader();
+
         return false;
     }
 

@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     private Week2 week2;
 
     private Toolbar toolbar;
+    private TextView navHeader;
 
 
     @Override
@@ -66,6 +68,9 @@ public class MainActivity extends AppCompatActivity
         biweek.populateWeek1();
         biweek.populateWeek2();
 
+        navHeader = (TextView) findViewById(R.id.navbarHours);
+        updateNavHeader();
+
         backStack = new FragmentStack(3);
 
         //Fragment instantiation
@@ -75,6 +80,7 @@ public class MainActivity extends AppCompatActivity
 
         //When first starting the app, make sure the current fragment is the progressStatus fragment
         getFragmentManager().beginTransaction().replace(R.id.current_fragment, progressStatus).commit();
+
     }
 
     @Override
@@ -160,6 +166,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onResume() {
         super.onResume();
+    }
+
+    public void updateNavHeader() {
+        navHeader.setText(Float.toString(biweek.calculateTotal()) + " worked this pay period");
     }
 
 }

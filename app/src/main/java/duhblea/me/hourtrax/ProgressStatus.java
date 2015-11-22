@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 public class ProgressStatus extends Fragment {
@@ -19,7 +20,12 @@ public class ProgressStatus extends Fragment {
     private ObjectAnimator progressAnimator;
     private ProgressBar progressBar;
     private View view;
+    private TextView totalHours;
     private Biweek theBiweek;
+
+    private float totalHoursWorked;
+
+
 
     public static ProgressStatus newInstance(MainActivity activity) {
         mActivity = activity;
@@ -41,7 +47,9 @@ public class ProgressStatus extends Fragment {
         view = inflater.inflate(R.layout.fragment_progress_status, container, false);
         theBiweek = mActivity.getBiweek();
 
-        initializeProgressBar();
+        totalHoursWorked = theBiweek.calculateTotal();
+
+        initializeUI();
 
         return view;
     }
@@ -67,14 +75,20 @@ public class ProgressStatus extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        totalHours.setText("Hours worked:  " + Float.toString(totalHoursWorked));
+        progressAnimator.start();
     }
 
-    private void initializeProgressBar() {
+    private void initializeUI() {
         progressBar = (ProgressBar)view.findViewById(R.id.hoursProgress);
         progressBar.setMax(80);
 
-        progressAnimator = ObjectAnimator.ofInt(progressBar, "progress", 0, 80);
+        progressAnimator = ObjectAnimator.ofInt(progressBar, "progress", 0, Math.round(totalHoursWorked));
         progressAnimator.setDuration(1000);
+
+        totalHours = (TextView) view.findViewById(R.id.totalBiWeek);
+
+
     }
 
 }
