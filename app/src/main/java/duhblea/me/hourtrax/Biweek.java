@@ -231,7 +231,7 @@ public class Biweek {
 
     public void populateWeek2() {
         mon2 = sharedPrefs.getFloat("mon2", 0);
-        tue2 = sharedPrefs.getFloat("tue", 0);
+        tue2 = sharedPrefs.getFloat("tue2", 0);
         wed2 = sharedPrefs.getFloat("wed2", 0);
         thur2 = sharedPrefs.getFloat("thur2", 0);
         fri2 = sharedPrefs.getFloat("fri2", 0);

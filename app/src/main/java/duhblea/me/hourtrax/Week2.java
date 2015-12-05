@@ -156,15 +156,25 @@ public class Week2 extends Fragment implements View.OnKeyListener {
                 friday.setText("");
                 saturday.setText("");
                 sunday.setText("");
+
+                biweek.setHourValue(2, Biweek.MONDAY, 0);
+                biweek.setHourValue(2, Biweek.TUESDAY, 0);
+                biweek.setHourValue(2, Biweek.WEDNESDAY, 0);
+                biweek.setHourValue(2, Biweek.THURSDAY, 0);
+                biweek.setHourValue(2, Biweek.FRIDAY, 0);
+                biweek.setHourValue(2, Biweek.SATURDAY, 0);
+                biweek.setHourValue(2, Biweek.SUNDAY, 0);
+
+                weekTotal.setText("");
             }
         });
     }
 
     private void populateFields() {
         monday.setText(biweek.getHours(2, Biweek.MONDAY) != 0.0
-                ? Float.toString(biweek.getHours(1, biweek.MONDAY)) : "");
+                ? Float.toString(biweek.getHours(2, biweek.MONDAY)) : "");
         tuesday.setText(biweek.getHours(2, Biweek.TUESDAY) != 0.0
-                ? Float.toString(biweek.getHours(1, biweek.TUESDAY)) : "");
+                ? Float.toString(biweek.getHours(2, biweek.TUESDAY)) : "");
         wednesday.setText(biweek.getHours(2, Biweek.WEDNESDAY) != 0.0
                 ? Float.toString(biweek.getHours(2, biweek.WEDNESDAY)) : "");
         thursday.setText(biweek.getHours(2, Biweek.THURSDAY) != 0.0

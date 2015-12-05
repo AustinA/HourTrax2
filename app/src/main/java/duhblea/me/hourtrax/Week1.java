@@ -156,6 +156,16 @@ public class Week1 extends Fragment implements View.OnKeyListener {
                 friday.setText("");
                 saturday.setText("");
                 sunday.setText("");
+
+                biweek.setHourValue(1, Biweek.MONDAY, 0);
+                biweek.setHourValue(1, Biweek.TUESDAY, 0);
+                biweek.setHourValue(1, Biweek.WEDNESDAY, 0);
+                biweek.setHourValue(1, Biweek.THURSDAY, 0);
+                biweek.setHourValue(1, Biweek.FRIDAY, 0);
+                biweek.setHourValue(1, Biweek.SATURDAY, 0);
+                biweek.setHourValue(1, Biweek.SUNDAY, 0);
+
+                weekTotal.setText("");
             }
         });
     }
